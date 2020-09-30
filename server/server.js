@@ -26,7 +26,9 @@ app.use("^/$", (req, res, next) => {
   });
 });
 
-app.use(express.static(path.resolve(__dirname, '..', 'build')))
+app.use(express.static(path.resolve(__dirname, "..", "build")));
+
+app.use(express.static(path.join(__dirname, "..", "public/welcome.png")));
 
 app.listen(PORT, () => {
   console.log(`App launched on ${PORT}`);
